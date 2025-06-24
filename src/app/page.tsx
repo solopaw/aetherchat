@@ -9,6 +9,7 @@ import { useToast } from '@/hooks/use-toast';
 import { sendMessage } from '@/app/actions';
 import { BotAvatar } from '@/components/bot-avatar';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -66,11 +67,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen bg-background text-foreground">
-      <header className="flex items-center p-4 border-b shrink-0 bg-card shadow-sm">
+      <header className="flex items-center justify-between p-4 border-b shrink-0 bg-card shadow-sm">
         <div className="flex items-center gap-3">
           <BotAvatar className="h-8 w-8 text-primary" />
           <h1 className="text-xl font-semibold font-headline">AetherChat</h1>
         </div>
+        <ThemeToggle />
       </header>
 
       <main className="flex-1 overflow-y-auto">
