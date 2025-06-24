@@ -67,7 +67,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen bg-background text-foreground">
-      <header className="flex items-center justify-between p-4 border-b shrink-0 bg-card shadow-sm">
+      <header className="flex items-center justify-between p-4 border-b shrink-0 bg-card shadow-xs">
         <div className="flex items-center gap-3">
           <BotAvatar className="h-8 w-8 text-primary" />
           <h1 className="text-xl font-semibold font-headline">AetherChat</h1>
@@ -103,7 +103,7 @@ export default function Home() {
               )}
               <div
                 className={cn(
-                  'max-w-[75%] p-3 rounded-xl shadow-sm',
+                  'max-w-[75%] p-3 rounded-xl shadow-xs',
                   message.role === 'user'
                     ? 'bg-primary text-primary-foreground'
                     : 'bg-card text-card-foreground'
@@ -128,7 +128,7 @@ export default function Home() {
                   <BotAvatar className="w-6 h-6 text-primary" />
                 </AvatarFallback>
               </Avatar>
-              <div className="max-w-[75%] p-3 rounded-xl bg-card text-card-foreground flex items-center space-x-2 shadow-sm">
+              <div className="max-w-[75%] p-3 rounded-xl bg-card text-card-foreground flex items-center space-x-2 shadow-xs">
                   <Loader2 className="w-5 h-5 animate-spin text-primary" />
                   <p className="text-sm text-muted-foreground">Aether is thinking...</p>
               </div>
@@ -138,7 +138,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="p-4 border-t bg-card/80 backdrop-blur-sm">
+      <footer className="p-4 border-t bg-card/80 backdrop-blur-xs">
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSubmit} className="relative">
             <Textarea
